@@ -25,7 +25,7 @@
 
 ## What is Paperclip?
 
-# Open-source orchestration for zero-human companies
+# Open-source orchestration for zero-human companies. This is nice.
 
 **If OpenClaw is an _employee_, Paperclip is the _company_**
 
