@@ -57,6 +57,11 @@ RUN npm install --global --omit=dev @anthropic-ai/claude-code@latest @openai/cod
 COPY scripts/docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
+RUN cp /usr/local/lib/node_modules/openclaw/openclaw.mjs \
+       /usr/local/lib/node_modules/openclaw/openclaw.mjs.bak-2026.3.28
+COPY docker/openclaw-system-stub.sh /usr/local/lib/node_modules/openclaw/openclaw.mjs
+RUN chmod +x /usr/local/lib/node_modules/openclaw/openclaw.mjs
+
 ENV NODE_ENV=production \
   HOME=/paperclip \
   HOST=0.0.0.0 \
